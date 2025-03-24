@@ -516,7 +516,6 @@ margin-bottom: 4px;
 }
 
 
-
 /*Footer*/
 
 footer {
@@ -564,8 +563,6 @@ tr td a::after {
    background-color:#7C7874 ;
     transition: width 0.1s ease-out; /* Smooth transition for the underline */
 }
-
-
 
 
 tr td a:hover{
