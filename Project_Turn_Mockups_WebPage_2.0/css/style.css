@@ -637,24 +637,10 @@ tr th a{
     text-decoration: none;
     color: inherit;
     
-    position: relative; /
+    position: relative; 
     }
     
    
 
 
-     @media (max-width: 1023px) {
-        .container {
-           display: flex;
-           flex-wrap: wrap;
-           flex-direction: row;
-           justify-content: space-between;
-        }
-        
-        
-     
-        .content {
-           flex: 1;
-           min-width: 400px; 
-        }
-     }
+    
