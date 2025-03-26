@@ -27,10 +27,11 @@ body {
 .main-container {
    
     max-width: 1440px;
-    min-width: 1024px;
+    
     width: 100%;
     margin: 0 auto; /* Ensures centering */
     padding: 0 50px; 
+    /* padding: 0 5%; */
     box-sizing: border-box;
 }
 
@@ -101,9 +102,10 @@ margin: 0;
 padding: 0; */
 
 width: 335px;
-padding-right: 50px;
+/* padding-right: 50px; */
 padding-left: 50px;
-left: 1055px;
+position: relative;
+left: 50px;
 gap: 68px;
 display: flex;
 
@@ -317,9 +319,11 @@ margin-top: 5px;
 .accommodation-and-popular {
     display: flex;
     justify-content:space-between;  
-    /* flex-wrap: wrap; */
-    /* width: 1340px; */
+ 
+  
     width: 100%;
+    gap: 30px;
+    max-width: 1340px;
 }
 
 .accommodation-and-popular section {
@@ -331,7 +335,11 @@ margin-top: 5px;
 
 /* Accommodation */
 .accommodation {
-    width: 871px;
+    flex-grow: 2;
+    flex-shrink: 1;
+    width: 100%;
+    max-width: 871px;
+    min-width: 600px; 
     height: 614px;
     gap: 30px;
     padding: 30px;
@@ -341,8 +349,9 @@ margin-top: 5px;
 }
 
 .accommodation-title {
- width: 811px;
- height: 26px;
+    width: 100%;
+ max-width: 811px;
+ max-height: 26px;
 font-size: 22px;
 font-weight: 700;
 margin-bottom: 25px;
@@ -350,9 +359,10 @@ margin-bottom: 25px;
 .accommodation .popular-cards {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 30px; /* Space between cards */
+    gap: 30px; 
     align-items:  start; 
     margin-top: 0;
+   
 }
 .accommodation .popular-cards .paris-card {
     display: flex;
@@ -407,7 +417,10 @@ margin-bottom: 4px;
 }
 /****** Popular ***********/
 .popular {
-    width: 429px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 429px;
+    min-width: 350px;
     height: 614px;
     padding: 30px;
     gap: 30px;
@@ -432,6 +445,7 @@ margin-bottom: 4px;
     margin-top: 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
+    
 }
 
 .popular-cards img {
@@ -476,7 +490,7 @@ margin-bottom: 4px;
     padding: 30px;
     text-align: left; */
 
-    width: 1280px;
+    max-width: 1280px;
     height: 559px;
     padding: 30px 30px 20px 30px;
     gap: 30px;
@@ -553,7 +567,7 @@ height:439px;
 /*Footer*/
 
 footer {
-    width: 1320px;
+    max-width: 1320px;
     height: 148px;
     background-color: var(--main-bg-color);
     display: flex;
@@ -562,9 +576,9 @@ footer {
 }
 
 .footer-container{
-
-    /* width: 100%;   adjusts size of the whole footer */
-    width: 1340px;
+/* 
+    width: 100%;   adjusts size of the whole footer */
+    max-width: 1340px;
     height: 163px;
 }
 table{
@@ -623,34 +637,24 @@ tr th a{
     text-decoration: none;
     color: inherit;
     
-    position: relative; /*Required for positioning the pseudo-element*/
+    position: relative; /
     }
     
-    /* 
-    tr th a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 2px; The height of the underline
-       background-color:#7C7874 ;
-        transition: width 0.1s ease-out; Smooth transition for the underline
-    }
-    
-    
-    
-    
-    tr th a:hover{
-    
-        text-decoration: underline;
-    
-    }
-    
-    tr th a:hover::after {
-        width: 100%; Full width when hovered
-    }
-     */
+   
 
 
-
+     @media (max-width: 1023px) {
+        .container {
+           display: flex;
+           flex-wrap: wrap;
+           flex-direction: row;
+           justify-content: space-between;
+        }
+        
+        
+     
+        .content {
+           flex: 1;
+           min-width: 400px; 
+        }
+     }
