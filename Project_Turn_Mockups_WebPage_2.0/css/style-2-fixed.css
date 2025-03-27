@@ -1,16 +1,12 @@
-/* General Reset */
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
-}
-
-.fa-solid, .fa-regular {
-    color: var(--main-color);
 }
 
 body {
@@ -20,30 +16,28 @@ body {
     width: 100%;
     margin: 0;
 }
-
-.main-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
-    box-sizing: border-box;
+.fa-star {
+    color: #0065FC;
 }
-
 a {
     text-decoration: none;
     color: black;
 }
 
+.main-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
 /* Header */
 .navbar {
-    height: 79px;
+    height: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 30px 0;
-    /* border-bottom: 1px solid #eaeaea; */
 }
 
 .bookiLogo img {
@@ -58,48 +52,62 @@ nav ul {
     margin: 0;
     align-items: flex-start;
     position: relative;
-    top: -50px; /* Lifts the links above the logo */
+    top: -30px;
 }
 
 nav ul li {
-    display: inline;
+    /* display: inline; */
+    position: relative;
+    list-style: none;
+}
+
+
+nav ul li ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+}
+nav ul li :hover::before {
+    transform: scaleY(1);
+}
+nav ul li :hover {
+    color: var(--main-color);
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: black;
     font-weight: 500;
-    padding-top: 20px;
     padding: 15px 0 0;
     display: inline-block;
     height: 100%;
-}
 
-nav ul li a:hover {
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
-    padding-top: 17px;
-    transition: all 0.1s ease-in-out;
 }
-
 /* Search Section */
 .search-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 40px 0 30px 0;
+    padding: 10px 0 20px 0;
     width: 100%;
 }
 
 .search-section .headline {
+    margin-bottom: 15px;
     width: 100%;
-    margin-bottom: 30px;
+   
 }
 
 .search-section h1 {
     font-size: 24px;
-    font-weight: 700;
     margin-bottom: 10px;
+    font-weight: 700;
+   
 }
 
 .search-section p {
@@ -108,16 +116,11 @@ nav ul li a:hover {
 }
 
 /* Search Box */
-
-
 .search-box {
     display: flex;
     align-items: center;
     background: white;
-    
     border-radius: 15px;
-    /* border: 1px solid #f0f0f0; */
-   
     max-width: 350px;
     width: 100%;
     box-shadow: 0 2px 5px rgba(23, 68, 233, 0.2);
@@ -129,10 +132,9 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     padding: 15px;
-    background-color: #f0f0f0; 
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        
+    background-color: #f0f0f0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .search-box input {
@@ -145,10 +147,12 @@ nav ul li a:hover {
     padding: 15px 0px 15px 5px;
     text-align: center;
 }
+
 .search-box input::placeholder {
     color: black;
     opacity: 1;
 }
+
 .search-box .search-btn {
     background: #0065FC;
     color: white;
@@ -168,21 +172,28 @@ nav ul li a:hover {
 
 .search-box .search-btn i {
     display: none;
+   
 }
 
 /* Filters */
 .filters {
     display: flex;
     gap: 10px;
-    justify-content: flex-start;
-    margin: 30px 0 25px 0;
     flex-wrap: wrap;
+    margin: 35px 0 25px 0;
 }
 
+.filters i {
+    color: #0b5bd3;
+    
+}
 .filter-span {
-    font-size: 17px;
-    padding-top: 10px;
+    font-size: 18px;
+    padding-top: 15px;
     font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .filter-btn {
@@ -191,8 +202,8 @@ nav ul li a:hover {
     gap: 5px;
     background-color: white;
     border: 2px solid #d9d9d9;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 15px 20px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 17px;
     font-weight: 800;
@@ -206,55 +217,24 @@ nav ul li a:hover {
     font-size: 10px;
     border: 1px solid #d9d9d9;
     border-radius: 50%;
-    padding: 4px 7px;
-    margin-right: 8px;
-    margin-top: 5px;
+    padding: 6px 9px;
+    margin-right: 5px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 3px;
+    color: #0b5bd3;
 }
 
 .availability-info {
     margin-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
-
-/* > project < standard */
-
-
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
-
-.card {
-    
-    background-color: white;
-    border-radius: 20px;
-    /* padding: 5px; */
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.card img {
-    object-fit: cover;
-}
-
-.card-title {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.euro {
-    font-weight: 700;
-}
-
-.neutralStar {
-    color: var(--main-bg-color)
-}
-
-/* Accommodation & Popular Sections */
+/* Accommodation Section */
 .accommodation-and-popular {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 35px;
     width: 100%;
 }
 
@@ -262,8 +242,7 @@ nav ul li a:hover {
 .popular {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
+    padding: 20px 30px 10px 30px;
 }
 
 .accommodation {
@@ -274,28 +253,21 @@ nav ul li a:hover {
     flex: 1;
 }
 
-
 .section-title {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 25px;
 }
 
-/* Accommodation Cards Grid */
 .accommodation .popular-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-.accommodation .popular-cards .paris-card {
+
+.card-link {
+    display: block;
     width: 100%;
-    height: auto;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
 }
 
 .paris-card {
@@ -305,33 +277,46 @@ nav ul li a:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
+    padding: 0;
    
+    max-height: 210px;
 }
 
 .paris-card img {
-    display: block;
-    width: 100%;
+    /* width: 100%;
     height: 124px;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    display: block; */
+    width: calc(100% - 10px);
+    margin: 4px 5px 0px 5px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    display: block;
 }
 
 .card-content {
-    padding: 10px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: left;
 }
 
 .card-title {
     font-size: 16px;
     margin-bottom: 4px;
+    margin-top: 0;
 }
 
 .card-subtitle {
     font-size: 14px;
+    margin: 0;
+}
+
+.card-subtitle span {
+    font-weight: bold;
 }
 
 .card-rating {
@@ -342,123 +327,80 @@ nav ul li a:hover {
     grid-column: 1 / span 3;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
-}
-/*LINKS*/
-
-.card-link {
-    display: block;
-    width: 100%;
+    margin-top: 15px;
+    text-align: left;
 }
 
-/* Popular Cards */
+/* Most Popular Cards */
 .popular-cards {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-
 .popular-cards .card {
     display: flex;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 140px; 
 }
 
-.popular-cards img {
-    width: 33%;
+.popular .card {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 150px;
+}
+
+.popular .card img {
+    /* width: 33%;
     height: 136px;
     object-fit: cover;
-    border-radius: 15px 0 0 15px;
+    border-radius: 20px 0 0 20px; */
+    /* margin: 5px;
+    width: 30%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px; */
+    width: 32%;           /*  More space for the image */
+    height: 150px;        /*  Match card height */
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+    padding: 5px;
+
+    
+
 }
 
-.popular-cards .card-content {
-    padding: 10px 15px;
+.popular .card-content {
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 67%;
+    width: 60%;
 }
-
-.show-more {
-    grid-column: 1 / span 3; /* Stretch across all columns */
-    text-align: left;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    width: 15%;
-}
-/****** Popular ***********/
-.popular {
-    flex: 1;
-    min-width: 350px;
-    background-color: var(--main-bg-color);
-    padding: 30px;
-    border-radius: 15px;
-}
-
-.popular-title {
+.popular-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0;
 }
 
-.popular-cards{
-
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.popular-header i {
+    color: #0065FC;
+    font-size: 18px;
 }
-.popular-cards .card {
-    display: flex;
-    flex: 1 1 auto;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    
-}
-
-.popular-cards img {
-    width: 33%;
-    height: 136px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-.popular-cards .card-content {
-    width: 250px;
-    padding-left: 15px;
-    /* padding-right: 15px;
-    gap: 8px; */
-
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-.popular-cards {
-    margin-top: 10px;
-    margin-bottom: 4px;
-}
-
-.popular-cards .card-subtitle {
-    margin: 0;
-    font-size: 14px;
-}
-
-.popular-cards .card-rating {
-    margin-bottom: 5px;
-}
-
-
-/* Things to Do Section */
-
 /* Things to Do Section */
 .things-to-do {
-    max-width: 1280px;
-    padding: 30px 0;
+    max-width: 1380px;
+    padding: 40px 0 30px 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+
 }
 
 .things-to-do h2 {
@@ -484,7 +426,7 @@ nav ul li a:hover {
 
 .thing-card img {
     width: 100%;
-    height: 210px;
+    height: 390px;
     object-fit: cover;
 }
 
@@ -492,6 +434,7 @@ nav ul li a:hover {
     font-size: 16px;
     font-weight: 600;
     padding: 15px;
+    margin: 5px;
     text-align: left;
 }
 
@@ -501,7 +444,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: var(--main-bg-color);
-    padding: 20px;
+    padding: 15px 20px 10px;
 }
 
 .footer-container {
@@ -518,7 +461,10 @@ td, th {
     padding: 6px;
     text-align: left;
     font-size: 16px;
-    
+}
+
+th {
+    font-size: 18px; /*placed below to gain specificity*/
 }
 
 tr td a {
