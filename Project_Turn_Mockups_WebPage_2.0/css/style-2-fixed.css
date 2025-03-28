@@ -491,3 +491,323 @@ tr td a:hover {
 tr td a:hover::after {
     width: 100%;
 }
+
+
+@media screen and (max-width:1070px) {
+
+    .accommodation-and-popular {
+        flex-direction: column;
+    }
+
+    .popular {
+
+        order: 2;
+        margin-top: 15px;
+        padding: 15px 30px 30px;
+    }
+
+    .accommodation {
+
+        order: 1;
+    }
+
+    /*Making Cards horizontal*/
+
+    .popular-cards {
+flex-direction: row;
+justify-content: space-between;
+gap: 20px;
+flex-wrap: wrap;
+    }
+
+    .popular .card {
+width: calc(33.33% - 13.33px); /*three cards*/
+/* width: 100%; */
+height: 155px;
+display: flex;
+flex-direction: row;
+    }
+
+    .popular .card img {
+        width: 35%;
+        height: 155px;
+        border-radius: 20px 0 0 20px;
+      }
+      .popular .card-content {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .things-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        
+    }
+
+    
+
+      .thing-card {
+        height: 290px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        text-align: center;
+        border-radius: 20px;
+        overflow: hidden;
+       
+      }
+
+      
+      
+      .thing-card img {
+        height: 215px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+        flex-shrink: 0;
+      }
+      
+      .thing-title {
+
+        padding: 20px 15px 20px 15px;
+        line-height: 1.5;
+      }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .main-container {
+padding: 0;
+
+    }
+
+    /* NAVBAR */
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border-bottom: 2px solid #ccc;
+    }
+  
+    nav ul li {
+      flex: 1;
+      text-align: center;
+      padding: 15px 0;
+      position: relative;
+    }
+  
+    nav ul li::before {
+      height: 3px;
+      top: auto;
+      bottom: 0;
+    }
+  
+    nav ul li:hover::before {
+      transform: scaleX(1);
+    }
+  
+    /* SEARCH SECTION */
+    .search-section {
+      padding: 20px 0;
+    }
+  
+    .search-box {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .search-box .search-btn {
+      display: none;
+    }
+  
+    .search-box .search-btn i {
+      display: block;
+      padding: 15px;
+      font-size: 18px;
+      background: var(--main-color);
+      color: white;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      cursor: pointer;
+    }
+  
+    /* FILTERS */
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      margin: 25px 0;
+    }
+  
+    .filter-span {
+      padding-top: 0;
+      margin-bottom: 10px;
+    }
+  
+    .filters-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  
+    .filter-btn {
+      width: 100%;
+      justify-content: center;
+     
+    }
+  
+    /* INFO ICON */
+    .availability-info {
+      display: flex;
+      align-items: flex-start;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  
+    #i {
+      margin-right: 10px;
+      margin-top: 2px;
+    }
+  
+    /* SWITCH ACCOMMODATION/POSITIONING */
+
+    
+    .accommodation-and-popular {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .accommodation {
+        order: 2;
+        padding: 0 20px 20px 20px;
+        background-color: white;
+      }
+    .popular {
+      order: 1;
+      padding: 20px 20px 0 20px;
+      border-radius: 0%;
+    }
+  
+    .popular-header .section-title {
+        margin-top: 10px;
+margin-bottom: 15px;
+
+    }
+  
+    .popular .popular-cards {
+
+        gap: 0;
+    }
+    .popular .card {
+      flex-direction: row;
+      width: 100%;
+      height: 145px;
+      margin-bottom: 15px;
+    }
+
+    .popular .card:nth-of-type(3){
+
+        margin-bottom: 30px;
+    }
+  
+    .popular .card img {
+      width: 35%;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 20px 0 0 20px;
+    }
+  
+    .popular .card-content {
+      width: 65%;
+      padding: 12px;
+    }
+  
+    /* PARIS ACCOMMODATION CARDS */
+    .accommodation .popular-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .accommodation-title .section-title {
+
+    margin-bottom: 15px;
+    }
+
+    .paris-card {
+      height: auto;
+      max-height: none;
+    }
+  
+    .paris-card img {
+      height: 120px;
+      
+    }
+  
+    /* THINGS TO DO IN PARIS */
+    .things-to-do {
+      padding: 20px 30px 20px 30px;
+   
+    }
+  
+    .things-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .thing-card {
+      height: auto;
+    }
+  
+    .thing-card img {
+      height: 140px;
+      width: 100%;
+      object-fit: cover;
+    }
+  
+    .thing-title {
+      padding: 15px 15px 10px 15px;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .show-more {
+
+        margin-top: 0;
+    }
+  
+    /* FOOTER */
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px 20px;
+      gap: 30px;
+    }
+  
+    .footer-container table {
+      display: block;
+    }
+  
+    .footer-container table tr {
+      display: block;
+      margin-bottom: 20px;
+    }
+  
+    .footer-container table td,
+    .footer-container table th {
+      display: block;
+      padding: 5px 0;
+    }
+  
+  }
