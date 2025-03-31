@@ -62,7 +62,7 @@ nav ul li {
 }
 
 
-nav ul li ::before {
+nav ul li::before {
     content: "";
     position: absolute;
     top: 0;
@@ -72,9 +72,9 @@ nav ul li ::before {
     background-color: var(--main-color);
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
-nav ul li :hover::before {
+nav ul li:hover::before {
     transform: scaleY(1);
 }
 nav ul li :hover {
@@ -181,6 +181,12 @@ nav ul li a {
     gap: 10px;
     flex-wrap: wrap;
     margin: 35px 0 25px 0;
+}
+
+.filters-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .filters i {
@@ -613,6 +619,7 @@ padding: 0;
       width: 100%;
       padding-top: 30px;
       margin: 0;
+      gap: 0;
       border-bottom: 2px solid #f2f2f2;
     }
   
@@ -622,9 +629,9 @@ padding: 0;
       padding: 15px 0;
       position: relative;
     }
-
+    
     nav ul li::before {
-        display: none !important;
+        display: none ;
     }
   
     nav li a::after {
@@ -633,6 +640,7 @@ padding: 0;
         bottom: 0;
         left: 0;
         height: 2px;
+        bottom: -1px;
         width: 0;
         background-color: #0065FC; /* blue */
         transition: width 0.2s ease;
@@ -692,8 +700,11 @@ padding: 0;
     }
   
     .filter-span {
-      padding-top: 0;
+    
       margin-bottom: 10px;
+      text-align: center;
+      justify-content: left;
+      
     }
   
     .filters-buttons {
@@ -704,9 +715,23 @@ padding: 0;
   
     .filter-btn {
       width: 100%;
-      justify-content: center;
-     
+      /* display: flex;
+      justify-content: flex-start;
+      text-align:left;
+      align-items: center; */
+     border-radius: 25px;
+     padding: 13px 20px;
+     gap: 10px;
+    white-space: nowrap;
     }
+    
+    .filter-btn i{
+font-size: 18px;
+margin: 0;
+flex-shrink: 0;
+    }
+
+  
   
     /* INFO ICON */
     .availability-info {
@@ -719,6 +744,7 @@ padding: 0;
     #i {
       margin-right: 10px;
       margin-top: 2px;
+     
     }
   
     /* SWITCH ACCOMMODATION/POSITIONING */
