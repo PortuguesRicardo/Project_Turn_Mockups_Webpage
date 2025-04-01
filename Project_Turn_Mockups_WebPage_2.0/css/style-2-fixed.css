@@ -15,6 +15,7 @@ body {
     align-items: center;
     width: 100%;
     margin: 0;
+    padding-inline: 30px;
 }
 .fa-star {
     color: #0065FC;
@@ -604,6 +605,10 @@ flex-direction: row;
 
 @media screen and (max-width: 768px) {
 
+  body{
+
+    padding-inline: 0;
+  }
     .main-container {
 padding: 0;
 
