@@ -706,6 +706,7 @@ nav li a:focus {
 
     form {
       width: 100%;    /*solution for the no width rule applied to the parent <form> Now the box will stretch */
+      padding-right: 10px;
     }
     .search-box {
       width: 100%;
@@ -744,6 +745,7 @@ nav li a:focus {
       flex-direction: column;
       align-items: stretch;
       gap: 10px;
+      padding-right: 10px;
       margin: 25px 0;
       width: 100%;
       
