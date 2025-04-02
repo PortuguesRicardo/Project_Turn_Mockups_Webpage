@@ -647,7 +647,7 @@ padding: 0;
     }
     
     
-  }
+  
   
     nav li a::after {
         content: '';
@@ -867,35 +867,35 @@ margin-bottom: 15px;
    
     }
   
-    .things-grid {
+     .things-grid {
       grid-template-columns: 1fr;
       gap: 15px;
-    }
+     }
   
-    .thing-card {
+     .thing-card {
       height: auto;
-    }
+     }
   
-    .thing-card img {
+     .thing-card img {
       height: 140px;
       width: 100%;
       object-fit: cover;
-    }
+     }
   
-    .thing-title {
+     .thing-title {
       padding: 15px 15px 10px 15px;
       font-size: 16px;
       text-align: left;
-    }
+     }
 
-    .show-more {
+     .show-more {
 
         margin-top: 0;
-    }
+     }
   
-    /* FOOTER */
+     /* FOOTER */
  
-    .footer-container table {
+     .footer-container table {
         display: none;
       }
     
