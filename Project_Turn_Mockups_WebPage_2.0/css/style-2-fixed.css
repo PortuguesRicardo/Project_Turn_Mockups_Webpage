@@ -671,6 +671,20 @@ nav li a:focus {
         width: 100%;
         
       }
+
+      nav li a.active {
+        color: #0065FC;
+      }
+      
+      nav li a.active::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #0065FC;
+      }
   
     /* SEARCH SECTION */
     .search-section {
